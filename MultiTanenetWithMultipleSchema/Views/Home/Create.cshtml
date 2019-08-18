@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = null;
+}
+
+@*<h2>Create</h2>*@
+
+
+@*<div class="row" ng-controller="JobController">
+    <div class="col-md-12">
+        <label>Job Title</label>
+        <input type="text" id="jobTitle" ng-model="jobTitle" class="form-control" />
+        <br />
+    </div>
+    <div class="col-md-12">
+        <input type="button" ng-click="save()" class="btn btn-info col-md-12" id="saveBtn" value="save" text="save" />
+    </div>
+*@
+
+<section id="description" class="card" ng-controller="JobController">
+    <div class="card-header">
+        <h4 class="card-title">Create Job</h4>
+    </div>
+    <div class="card-body collapse in">
+        <div class="card-block">
+            <div class="card-text">
+                <form name="jobForm">
+                    <div class="col-md-12">
+                        <label>Job Title</label>
+                        <input type="text" id="jobTitle" ng-model="jobTitle" class="form-control"  required/>
+                        <br />
+                    </div>
+                    <div class="col-md-12">
+                        <input type="button" ng-disabled="jobForm.$invalid" ng-click="save()" class="btn btn-info form-control" id="saveBtn" value="save" text="save" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

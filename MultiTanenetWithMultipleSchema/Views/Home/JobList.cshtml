@@ -1,0 +1,27 @@
+﻿@model IQueryable<MultiTanenetWithMultipleDatabase.Models.Job>
+@{
+    Layout = null;
+}
+
+<br />
+<ul>
+
+    @if (Model != null && User.Identity.IsAuthenticated)
+    {
+        foreach (var job in Model)
+        {
+            <li>@job.JobName</li>
+        }
+    }
+    else
+    {
+        <script>
+            $(document).ready(function () {
+                window.location.href = '#/Login';
+
+            });
+        </script>
+    }
+</ul>
+
+

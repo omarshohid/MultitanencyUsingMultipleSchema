@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "CreateTanent";
+    Layout = null;
+}
+<section id="description" class="card" ng-controller="TenantController">
+    <div class="card-header">
+        <h4 class="card-title">Create Tenant</h4>
+    </div>
+    <div class="card-body collapse in">
+        <div class="card-block">
+            <div class="card-text">
+                <div class="col-md-12">
+                    <form name="tenantForm">
+                        <div clsss="form-control">
+                            <lable>Tenant Name</lable>
+                            <input id="tenant" ng-model="Tenant.tenantName" type="text" class="form-control" required />
+                            <br />
+                        </div>
+                        <div clsss="form-control">
+                            <lable>User Name</lable>
+                            <input id="user" type="text" ng-model="Tenant.userName" class="form-control" required />
+                            <br />
+                        </div>
+                        <div clsss="form-control">
+                            <input id="saveBtn" ng-disabled="tenantForm.$invalid" ng-click="save()" type="button" text="Save" value="Save" class=" btn btn-info form-control" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

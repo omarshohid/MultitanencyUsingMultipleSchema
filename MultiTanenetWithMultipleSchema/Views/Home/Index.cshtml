@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+}
+@*@model IQueryable<MultiTanenetWithMultipleDatabase.Models.Job>*@
+<section id="description" class="card" ng-controller="JobController" ng-init="loadJobs()">
+    <div class="card-header">
+        <h4 class="card-title">Job List</h4>
+    </div>
+    <div class="card-body collapse in">
+        <div class="card-block">
+            <div class="card-text">
+                <div class="col-md-12">
+                    <ul>
+                        @*@if (Request.IsAuthenticated && Model != null)
+                        {
+                            foreach (var job in Model)
+                            {
+                                <li>@job.JobName</li>
+                            }
+                        }
+                        else
+                        {
+                            <li>Please log in first!</li>                           
+                        }*@
+                        <li ng-repeat="item in joblist">{{item.JobName}}</li>
+
+                    </ul>
+                </div>                
+            </div>
+        </div>
+    </div>
+</section>
